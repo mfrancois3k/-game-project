@@ -28,9 +28,9 @@ function shuffle(deck) {
   let randomIndex;
 
   while (currentIndex !== 0) {
-    randomIndex = Math.floor(Math.random() * (currentIndex)); // randomizing the index of all the cards in the deck (ie uo to the nuber 52 (number of cards in the deck));
-    temporaryValue = shuffledDeck[currentIndex]; // card value of the card chosen, due to the randomized index that was given in the randomIndex variable above.
-    shuffledDeck[currentIndex] = shuffledDeck[randomIndex]; //takes the card index selected from randomized card deck shuffling, and assigns it as the current card that you have. 
+    randomIndex = Math.floor(Math.random() * (currentIndex)); // randomizing the index of all the cards in the deck ;
+    temporaryValue = shuffledDeck[currentIndex]; // card value of the card chosen, due to the randomized index.
+    shuffledDeck[currentIndex] = shuffledDeck[randomIndex]; //takes the card index selected from randomized card deck shuffling, 
     shuffledDeck[randomIndex] = temporaryValue; //gives your chosen card the value of your randonmly selected card, after shuffling. 
 
     currentIndex --; 
@@ -56,7 +56,7 @@ function compare(card1, card2) {
 function guess(card1, card2) {
   console.log(`Current card: ${card1.rank} of ${(card2.suits)}`)
   let input = getInput(`Do you think the next card will be higher or lower than the current card that you have? If higher, answer: H. For lower, answer L.`).toLowerCase();
-  //used .toLowerCase to account for any case sensitive discrepencies in user input answer.
+  //used .toLowerCase to account for any case sensitive.
 
   switch (input) {
     case 'h':
@@ -80,8 +80,8 @@ function playGame() {
 
   //while loop that states score is less than 5, and less than the amount of items still in the deck
   while (score < 5 && score < deck.length) {
-    let nextCard = deck.pop(); //removes the last object and assigns this value to the variable nextCard
-
+    let nextCard = deck.pop(); //removes the last object and assigns this value 
+    
     if (guess(currentCard, nextCard) === true) {
       score++; //when the guess is correct (true), the player's score increases by 1
       console.log(`Congratulations, your score is now ${score}!`)
