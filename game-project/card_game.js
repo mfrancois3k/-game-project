@@ -33,7 +33,7 @@ function shuffle(deck) {
     shuffledDeck[currentIndex] = shuffledDeck[randomIndex]; //takes the card index selected from randomized card deck shuffling, and assigns it as the current card that you have. 
     shuffledDeck[randomIndex] = temporaryValue; //gives your chosen card the value of your randonmly selected card, after shuffling. 
 
-    currentIndex --; //dashes mean subtract from currentIndex one index value
+    currentIndex --; 
   }
 
   return shuffledDeck;
