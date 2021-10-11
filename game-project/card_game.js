@@ -1,12 +1,5 @@
 const readlineSync = require("readline-sync");
 
-
-
-function getInput(prompt) {
-  return readlineSync.question(`${prompt}: `);
-}
-
-// YOUR CODE STARTS HERE!!
 function getInput(prompt) {
   return readlineSync.question(`${prompt}: `);
 }
